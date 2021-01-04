@@ -518,3 +518,22 @@ EOF
 solcjs --bin --abi --base-path . ./testcash.sol
 ```
  
+<h3>Deploy the Contract</h3>
+
+Deploy the testcash contract the same way you deployed the hello world contract in the Mallet end to end tutorial
+do
+```
+testcashAddress = getReceipt(deploymentHash).contractAddress
+```
+To get the contract address of testcash.
+
+
+<h3>Interact With TestCash</h3>
+
+Try calling a transfer function like this:
+
+```
+toAddress = <address you want to send to>
+amount = amount you want to send in hexadecimal
+iele.callContract({to: testcashAddress, gas: 1000000, func: 'transfer()', args: [toAddress,amount]})
+```
