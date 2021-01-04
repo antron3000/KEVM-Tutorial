@@ -514,5 +514,7 @@ EOF
 ```
 
 <h3>Compile With SolC</h3>
-```solcjs --bin --abi --base-path . ./testcash.sol```
+```
+solcjs --bin --abi --base-path . ./testcash.sol
+```
  
